@@ -1,7 +1,7 @@
 twitter:
-  key: yOhuvqlc0qJN71DlDyhA
-  secret: Ipupbyz6BK8OjDiym4KA9nAlcJ2sj5yDdqQJnbW4Oug
+  key: {TWITTER_API_KEY}
+  secret: {TWITTER_API_SECRET}
 tokbox:
-  partner_key: 100051
-  api_secret: e6d6091570b6bb5350d74811f0ae6968
+  partner_key: {TOKBOX_API_KEY} 
+  api_secret: {TOKBOX_API_SECRET}
 max_connections: 8

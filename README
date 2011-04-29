@@ -1,4 +1,6 @@
 TrendTok turns every trending Tweet into a video chat.
 
-It's a Rails application.
+Please make sure to update the values in config/config.yml with API keys from:
 
+	Twitter: http://dev.twitter.com/
+	TokBox: http://www.tokbox.com/opentok/api/tools/js/apikey
