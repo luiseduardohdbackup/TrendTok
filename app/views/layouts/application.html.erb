@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Video chat meets Twitter trends | TrendTok</title>
+  <meta name="description" content="Video chat live about the hottest real-time Twitter trends." />
+  <meta name="keywords" content="Twitter, trends, conversation, live video chat, OpenTok, TrendTok, TokBox" />
+  <%= stylesheet_link_tag 'reset', 'style' %>
+  <%= javascript_include_tag :defaults, 'ba-bbq', 'themes', 'positions', 'slideshow', 'blockslider', 'sitescript' %>
+  <%= csrf_meta_tag %>
+  <%= yield(:head) %>
+  <!--[if lt IE 9]>
+    <%= javascript_include_tag 'html5_ie' %>
+    <%= stylesheet_link_tag 'ie' %>
+  <![endif]-->
+</head>
+<body>
+  <header>
+    <div class="head">
+      <div class="border"><div></div></div>
+      <div class="aligned header-top">
+        <hgroup>
+          <h1><%= link_to 'TrendTok', root_path %></h1>
+          <h2>Creating conversations of Twitter hot topics</h2>
+        </hgroup>
+        <%= link_to 'powered by open·tok', "http://tokbox.com", :class => 'opentok', :title => 'powered by open·tok', :target => '_blank' %>
+        <% unless logged_in? %>
+          <%= link_to 'Login to Twitter', login_path, :class => 'join-conv-header border-all' %>
+        <% else %>
+          <div class="userinfo">
+            <span class="avatar">
+              <%= image_tag current_user.profile_image_url, :alt => "user avatar", :size => '32x32' %>
+            </span>
+            <div class="username">
+              <div>
+                <%= link_to "@#{current_user.screen_name}", twitter_profile_url(current_user), :class => 'at' %>
+              </div>
+              <div><%= link_to 'Logout', logout_path, :class => 'logout' %></div>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+    <nav>
+      <div>
+        <div class="aligned topics-wrapper">
+          <div class="arrow back"></div>
+          <div class="topics-aligned">
+            <ul class="topics">
+              <%= render :partial => "shared/trends_bar" %>
+            </ul>
+            <div class="blur left"></div>
+            <div class="blur right"></div>
+          </div>
+          <div class="arrow next"></div>
+        </div>
+      </div>
+    </nav>
+    <div class="listeners-wrapper">
+      <div class="aligned">
+        <div class="current-topic">You are talking about <span><%= @trend.name %></span></div>
+        <div class="arrangement">
+          <div class="option-button border-all">
+            <a href="#" class="activate-theme border-all">Activate Theme</a>
+          </div>
+          <div class="option-button arrangements-opts border-all">
+            <a href="#" class="grid"></a>
+            <a href="#" class="random"></a>
+          </div>
+          <span class="arrangement-lbl"><span>|</span> Arrangement:</span>
+        </div>
+      </div>
+    </div>
+  </header>
+  <%= yield %>
+
+  <ul class="social-bookmarkers border-left">
+    <li class="tw"><a href="#" title="twitter">twitter</a></li>
+    <li class="fb"><a href="#" title="facebook">facebook</a></li>
+  </ul>
+</body>
+</html>
+

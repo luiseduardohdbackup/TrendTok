@@ -1,0 +1,9 @@
+<% @latest.each do |trend| %>
+  <li data-value="<%= trend.friendly_id %>">
+    <%= link_to root_path(:anchor => "trend=#{trend.friendly_id}") do %>
+      <span class="trend-name"><%= trend.name %></span>
+    <% end %>
+    <div class="divider right"></div>
+    <div class="divider left"></div>            
+  </li>
+<% end %>

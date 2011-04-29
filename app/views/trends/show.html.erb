@@ -1,0 +1,79 @@
+<% head do %>
+  <script type="text/javascript">
+    var _tokbox_session_id,
+        _partner_key = <%= APP_CONFIG['tokbox']['partner_key'] %>,
+        _logged_in = <%= logged_in? %>,
+        _default_trend_id = '<%= @trend.friendly_id %>',
+        _ttl = <%= 1.minutes * 1000 %>,
+        _token = <%= @token %>,
+        tokbox;
+    $(function() {
+        _tokbox_session_id = getTokboxSessionId() || '<%= @trend.tokbox_session %>';
+        Trend.setCurrentTrend();
+        if (TB.checkSystemRequirements() != TB.HAS_REQUIREMENTS) {
+          alert("Minimum System Requirements not met!");
+        } else {
+          tokbox = new Tokbox(_tokbox_session_id, _partner_key, _logged_in, _token);
+          themes.loadTheme();
+        }
+    });
+  </script>
+<% end %>
+<% javascript 'http://static.opentok.com/v0.90/js/TB.min.js', 'tokbox' %>
+<section>
+  <div class="aligned">
+    <ul class="tweets right" id="primero"></ul>
+    <div class="video-area">
+       <div class="alignedRel not-wrapper flash kicked">
+         <div class="not border-all box-shadow">
+           <div class="border-all">
+             <p class="not-title">You have been kicked</p>
+             <p class="not-legend">You've been kicked from the talk session.</p>
+             <a href="#" class="close"></a>
+           </div>
+         </div>
+       </div>
+       <div class="alignedRel not-wrapper flash moderator">
+          <div class="not border-all box-shadow">
+            <div class="border-all">
+              <p class="not-title">You are a moderator</p>
+              <p class="not-legend">You have now become a moderator, you have the ability to kick users off!</p>
+              <a href="#" class="close"></a>
+            </div>
+          </div>
+       </div>
+       <div class="alignedRel not-wrapper flash listener">
+           <div class="not border-all box-shadow">
+             <div class="border-all">
+               <p class="not-title">You're a listener</p>
+               <p class="not-legend">Since you are not logged in with Twitter you can only listen.</p>
+               <a href="#" class="close"></a>
+             </div>
+           </div>
+        </div>
+       <div class="join-conv-wrapper alignedRel">
+          <div class="join-conv border-all">
+            <div class="join-conv-btn border-all">
+              <%= link_to login_path, :class => 'join-conv-lk' do %>
+                 <span>Login</span> to Twitter
+                 <span class="white-shadow border-all"></span>
+              <% end%>
+            </div>
+            <a href="#" class="close-join"></a>
+          </div>
+       </div>
+       <div class="publish-wrapper alignedRel">
+          <div class="publish-video border-all">
+            <div class="publish-btn border-all">
+              <%= link_to '#', :class => 'publish-lk' do %>
+                 <span>Join</span> Conversation
+                 <span class="white-shadow border-all"></span>
+              <% end%>
+            </div>
+            <a href="#" class="close-publish"></a>
+          </div>
+       </div>
+    </div>
+    <ul class="tweets left" id="segundo"></ul>
+  </div>
+</section>

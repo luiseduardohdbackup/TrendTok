@@ -1,0 +1,39 @@
+#!/usr/bin/env ruby
+
+require File.expand_path('../../config/environment',  __FILE__)
+
+pid_file = "#{Rails.root}/tmp/pids/scheduler.pid"
+
+if ARGV[0] == 'start'
+
+  File.open(pid_file, 'w') do |f|
+    f.puts Process.pid
+  end
+
+  scheduler = Rufus::Scheduler::PlainScheduler.start_new(:thread_name => 'trends scheduler')
+  
+  scheduler.every '5m' do
+    Connection.kill_old
+  end
+  
+  scheduler.every '4h', :first_in => '4h' do
+    Trend.populate
+  end
+  
+  scheduler.join
+
+elsif ARGV[0] == 'stop'
+
+  pid = File.read(pid_file) if File.exists?(pid_file)
+  begin
+    Process.kill 9, pid.to_i
+    puts "Scheduler stopped"
+  rescue Errno::ESRCH
+    puts "There is no scheduler running."
+  end
+
+else
+
+  puts "Usage: ./script/scheduler start|stop"
+end
+

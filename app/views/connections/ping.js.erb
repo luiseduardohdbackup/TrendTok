@@ -1,0 +1,4 @@
+window.currentPingTimeout = setTimeout(tokbox.pingServer, <%= 1.minutes * 1000 %>);
+<% if @connection %>
+  Trend.toggleModerator(<%= @connection.is_moderator? %>);
+<% end %>

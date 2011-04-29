@@ -1,0 +1,81 @@
+body{background-image: url('../../../images/themes/fandango/bg.jpg'); background-repeat: no-repeat; background-position: 50% 100%; background-color: #dcf1fd; background-attachment: fixed;}
+.tweet > p{background-color: #fdfeff; padding: 15px; color: #037ab0; border-width: 1px; border-style: solid; border-color: #b0d0e0 #e1eef5 transparent #e1eef5; cursor: pointer;}
+.tweets.right > .tweet > span{border-color: transparent transparent transparent #fdfeff;}                     
+.tweets.left > .tweet > span{border-color: transparent #fdfeff transparent transparent;} 
+.social-bookmarkers{ border: 1px solid #98b8ca;
+  background-image: -moz-linear-gradient(top, #d5effd, #bce4fb);
+  background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, #d5effd),color-stop(1, #bce4fb));
+  filter:  progid:DXImageTransform.Microsoft.gradient(startColorStr='#d5effd', EndColorStr='#bce4fb');
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#d5effd', EndColorStr='#bce4fb')";
+}                                                     
+
+.social-bookmarkers > li{border-top: 1px solid #d0ecfc; background: none;}
+.social-bookmarkers > li:first-child{border-bottom: 1px solid #92c2db;}
+      
+
+.fb:hover{
+  background-image: -moz-linear-gradient(top, #e0f5ff, #d8f1fe);
+  background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, #e0f5ff),color-stop(1, #d8f1fe));
+  filter:  progid:DXImageTransform.Microsoft.gradient(startColorStr='#e0f5ff', EndColorStr='#d8f1fe');
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#e0f5ff', EndColorStr='#d8f1fe')";
+}
+
+.tw:hover{
+  background-image: -moz-linear-gradient(top, #d8f1fe, #cdedfe);
+  background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, #d8f1fe),color-stop(1, #cdedfe));
+  filter:  progid:DXImageTransform.Microsoft.gradient(startColorStr='#d8f1fe', EndColorStr='#cdedfe');
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#d8f1fe', EndColorStr='#cdedfe')";
+}                      
+
+.social-bookmarkers > li > a{background-image: url('../../../images/themes/fandango/social-bookmarkers.png');}
+
+.tweets.right{background-image: url('../../../images/themes/fandango/bird-right.png')}
+.tweets.left{background-image: url('../../../images/themes/fandango/bird-left.png')}
+
+.video > div:first-child{background-color: #cfedfc; background-image: url('../../../images/themes/fandango/cloud-bottom.png'); background-repeat: repeat-x; background-position: 0 bottom; border-style: solid; border-width: 1px; border-color: #86d9f9 #86d9f9 #49c9f5 #86d9f9; padding: 6px 6px 28px 6px;}
+
+.video > .box-shadow,
+.ctrls.box-shadow{
+  -moz-box-shadow: 0px 0px 0px #000000;
+  -webkit-box-shadow: 0px 0px 0px #000000;
+  box-shadow: 0px 0px 0px #000000
+}      
+
+.not.box-shadow{
+  -moz-box-shadow: 0px 0px 4px #bbd5e3;
+  -webkit-box-shadow: 0px 0px 4px #bbd5e3;
+  box-shadow: 0px 0px 4px #bbd5e3
+}
+
+.cloud-left{width: 35px; height: 98px; position: absolute; left: -29px; bottom: 0; background: url('../../../images/themes/fandango/cloud-left.png') no-repeat 0 0;}
+.cloud-right{width: 28px; height: 97px; position: absolute; right: -26px; bottom: 0; background: url('../../../images/themes/fandango/cloud-right.png') no-repeat 0 0;}
+.cloud-right-video{width: 35px; height: 63px; position: absolute; right: 2px; bottom: 1px; background: url('../../../images/themes/fandango/cloud-right-video.png') no-repeat 0 0;}
+.cloud-left-video{width: 50px; height: 52px; position: absolute; left: 7px; bottom: 11px; background: url('../../../images/themes/fandango/cloud-left-video.png') no-repeat 0 0;}
+
+.dragg-video{
+  background-image: -moz-linear-gradient(top, #464b50, #34393d);
+  background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, #464b50),color-stop(1, #34393d));
+  filter:  progid:DXImageTransform.Microsoft.gradient(startColorStr='#464b50', EndColorStr='#34393d');
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#464b50', EndColorStr='#34393d')";
+}    
+
+.close-video{                          
+  width: 44px;
+  border-color: #96bbd4 #96bbd4 #96bbd4 #35393e; border-width: 1px 1px 0 1px;
+  background-image: -moz-linear-gradient(top, #e0f4ff, #bce4ff);
+  background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, #e0f4ff),color-stop(1, #bce4ff));
+  filter:  progid:DXImageTransform.Microsoft.gradient(startColorStr='#e0f4ff', EndColorStr='#bce4ff');
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#e0f4ff', EndColorStr='#bce4ff')";
+}
+
+.ctrl > a{background-image: url('../../../images/themes/fandango/icns-dragg-close.png');}
+
+.not > div{background-color: #e4f1f8;}
+.not-title{color: #3d8fbf}
+.not-legend{color: #6f9ab4;}
+
+.close{background-image: url('../../../images/themes/fandango/close.png');}
+
+.ui-icon {background-image: url('../../../images/themes/fandango/draggable.png');}
+.ui-resizable-handle{width: 12px; height: 12px;}
+.ui-resizable-se{right: -13px; bottom: 11px;}

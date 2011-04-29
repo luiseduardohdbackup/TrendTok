@@ -1,0 +1,53 @@
+{
+  "results":[
+    {
+       "profile_image_url":"http://a2.twimg.com/profile_images/1087436570/craig01_normal.jpg",
+       "created_at":"Thu, 14 Oct 2010 21:52:34 +0000",
+       "from_user":"craig_keeling",
+       "metadata":{"result_type":"recent"},
+       "to_user_id":4671,
+       "text":"1@markng Have you tried tokbox.com? It worked well for a meeting I had yesterday.",
+       "id":27379617424,
+       "from_user_id":44194477,
+       "to_user":"markng",
+       "geo":null,
+       "iso_language_code":"en",
+       "source":"&lt;a href=&quot;http://twitter.com&quot; rel=&quot;nofollow&quot;&gt;Tweetie for Mac&lt;/a&gt;"
+     },
+     {
+       "profile_image_url":"http://a1.twimg.com/profile_images/224776213/IMAGE_310_normal.jpg",
+       "created_at":"Thu, 14 Oct 2010 16:34:38 +0000",
+       "from_user":"sorenj",
+       "metadata":{"result_type":"recent"},
+       "to_user_id":null,
+       "text":"2Skype, GoToMeeting, WebEx, Tokbox... who else is in the web based video conferencing game I need to know about?",
+       "id":27357018910,
+       "from_user_id":14811,
+       "geo":null,
+       "iso_language_code":"en",
+       "source":"&lt;a href=&quot;http://twitter.com/&quot;&gt;web&lt;/a&gt;"
+     },
+     {
+       "profile_image_url":
+       "http://a3.twimg.com/profile_images/1128034663/IMG_0152_normal.JPG",
+       "created_at":"Thu, 14 Oct 2010 15:57:08 +0000",
+       "from_user":"eritaeng",
+       "metadata":{"result_type":"recent"},
+       "to_user_id":null,
+       "text":"3to: mafam. Heheh, my permanent image for tokbox in the future http://twitpic.com/2xkcox",
+       "id":27353787451,
+       "from_user_id":112431267,
+       "geo":null,
+       "iso_language_code":"en",
+       "source":"&lt;a href=&quot;http://twitpic.com&quot; rel=&quot;nofollow&quot;&gt;Twitpic&lt;/a&gt;"
+     }
+   ],
+   "max_id":27379617424,
+   "since_id":0,
+   "refresh_url":"?since_id=27379617424&q=tokbox",
+   "next_page":"?page=2&max_id=27379617424&rpp=3&q=tokbox",
+   "results_per_page":3,
+   "page":1,
+   "completed_in":0.014086,
+   "query":"tokbox"
+}
